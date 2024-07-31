@@ -5,12 +5,13 @@ import clsx from 'clsx';
 
 /** Функция для обработки открытия/закрытия формы */
 
-export type ArrowButton = {
+export type ArrowButtonProps = {
 	isOpen: boolean;
 	onClick: () => void;
 };
 
-export const ArrowButton = ({ isOpen, onClick }: ArrowButton) => {
+export const ArrowButton = (props: ArrowButtonProps) => {
+	const { isOpen, onClick } = props;
 	return (
 		/* Не забываем указаывать role и aria-label атрибуты для интерактивных элементов */
 		<div

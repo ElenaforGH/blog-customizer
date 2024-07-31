@@ -15,8 +15,8 @@ export const ArrowButtonStory: Story = {
 			<>
 				<ArrowButton
 					isOpen={false}
-					onClick={() => {
-						console.log();
+					onClick={function (): void {
+						throw new Error('Function not implemented.');
 					}}
 				/>
 			</>

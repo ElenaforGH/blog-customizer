@@ -39,7 +39,8 @@ export const ArticleParamsForm = (props: ArticleParamsFormProps) => {
 	const cleanSelectedOptions = () => {
 		setSelectedOptions(defaultArticleState);
 	};
-	const acceptSelectedOptions = () => {
+	const acceptSelectedOptions = (event: { preventDefault: () => void }) => {
+		event.preventDefault();
 		setSelectedOptions(selectedOptions);
 	};
 	const showOrHideForm = () => {
@@ -59,9 +60,7 @@ export const ArticleParamsForm = (props: ArticleParamsFormProps) => {
 					className={clsx(styles.container, {
 						[styles.container_open]: isOpen,
 					})}>
-					<form
-						className={styles.form}
-						onSubmit={(event) => event.preventDefault()}>
+					<form className={styles.form} onSubmit={acceptSelectedOptions}>
 						<Text size={31} weight={800} uppercase={true}>
 							Задайте параметры
 						</Text>
@@ -108,11 +107,7 @@ export const ArticleParamsForm = (props: ArticleParamsFormProps) => {
 								type='reset'
 								onClick={cleanSelectedOptions}
 							/>
-							<Button
-								title='Применить'
-								type='submit'
-								onClick={acceptSelectedOptions}
-							/>
+							<Button title='Применить' type='submit' />
 						</div>
 					</form>
 				</aside>
