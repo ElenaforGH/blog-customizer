@@ -25,7 +25,7 @@
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
-	width: 124px;
+	width: 123px;
 	height: 35px;
 	text-align: center;
 	border-right: 1px solid #000000;
@@ -40,11 +40,11 @@
 
 .label:hover,
 .item[data-checked='true'] .label:hover {
-	background: var(--gold, #ffc802);
+	background-color: #ffedab;
 }
 
 .item[data-checked='true'] .label {
-	background: var(--gold, #ffc802);
+	background-color: var(--gold, #ffc802);
 }
 
 .container {
